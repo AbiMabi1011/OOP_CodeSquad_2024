@@ -57,7 +57,7 @@ public class Pharmacy_Inventory extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel4.setBackground(new java.awt.Color(153, 153, 153));
+        jPanel4.setBackground(new java.awt.Color(102, 102, 102));
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel7.setText("Manufacturer");
@@ -70,6 +70,7 @@ public class Pharmacy_Inventory extends javax.swing.JFrame {
         jLabel9.setText("Stock Limit");
 
         jPanel8.setBackground(new java.awt.Color(102, 102, 102));
+        jPanel8.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel5.setText("Delete Inventory");
@@ -151,7 +152,7 @@ public class Pharmacy_Inventory extends javax.swing.JFrame {
             }
         });
 
-        jPanel9.setBackground(new java.awt.Color(153, 153, 153));
+        jPanel9.setBackground(new java.awt.Color(0, 0, 0));
         jPanel9.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
@@ -199,7 +200,7 @@ public class Pharmacy_Inventory extends javax.swing.JFrame {
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(32, Short.MAX_VALUE)
+                .addContainerGap(28, Short.MAX_VALUE)
                 .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(21, 21, 21))
         );
