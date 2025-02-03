@@ -81,13 +81,13 @@ public class Signup extends javax.swing.JFrame {
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("MediCare Plus ");
         jPanel2.add(jLabel7);
-        jLabel7.setBounds(50, 270, 291, 45);
+        jLabel7.setBounds(50, 270, 294, 45);
 
         jLabel8.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Copyright © 2025 Medicare Plus. All rights reserved");
         jPanel2.add(jLabel8);
-        jLabel8.setBounds(50, 410, 274, 16);
+        jLabel8.setBounds(50, 410, 282, 16);
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 102, 102));
