@@ -105,6 +105,11 @@ public class Patient_Home extends javax.swing.JFrame {
         jButton4.setBounds(500, 250, 220, 140);
 
         jButton5.setText("Book Appointments");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
         jPanel2.add(jButton5);
         jButton5.setBounds(200, 60, 220, 140);
 
@@ -134,7 +139,7 @@ public class Patient_Home extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-          Edit_Profile  Edit_ProfileFrame = new Edit_Profile();
+                Edit_Profile  Edit_ProfileFrame = new Edit_Profile();
                 Edit_ProfileFrame.setVisible(true);
                 Edit_ProfileFrame.pack();
                 Edit_ProfileFrame.setLocationRelativeTo(null);
@@ -148,6 +153,14 @@ public class Patient_Home extends javax.swing.JFrame {
         Login1Frame.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        Book_Appointment Book_AppointmentFrame = new Book_Appointment();
+        Book_AppointmentFrame.setVisible(true);
+        Book_AppointmentFrame.pack();
+        Book_AppointmentFrame.setLocationRelativeTo(null);
+        this.dispose();
+    }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
      * @param args the command line arguments

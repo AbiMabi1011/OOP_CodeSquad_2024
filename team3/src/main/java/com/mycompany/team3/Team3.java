@@ -4,7 +4,9 @@
 package com.mycompany.team3;
 
 
+import com.mycompany.team3.Doctorview.Edit_Profiledoc;
 import com.mycompany.team3.LoginSignup.Login1;
+import com.mycompany.team3.Patientview.Edit_Profile;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -29,10 +31,16 @@ public class Team3 {
        java.awt.EventQueue.invokeLater(new Runnable() {
             
             public void run() {
-                Login1 Login1Frame = new Login1();
+            /*    Login1 Login1Frame = new Login1();
                 Login1Frame.setVisible(true);
                 Login1Frame.pack();
-                Login1Frame.setLocationRelativeTo(null); //center 
+                Login1Frame.setLocationRelativeTo(null); //center */
+             
+                Edit_Profiledoc  Edit_ProfiledocFrame = new  Edit_Profiledoc();
+                 Edit_ProfiledocFrame.setVisible(true);
+                 Edit_ProfiledocFrame.pack();
+                 Edit_ProfiledocFrame.setLocationRelativeTo(null); //center 
+                
                 
         // TODO code application logic here
     }

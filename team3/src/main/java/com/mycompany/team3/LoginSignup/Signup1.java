@@ -4,8 +4,12 @@
  */
 package com.mycompany.team3.LoginSignup;
 
+import com.mysql.cj.protocol.Resultset;
+import java.awt.HeadlessException;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
@@ -218,6 +222,7 @@ public class Signup1 extends javax.swing.JFrame {
 
     private void SignupBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignupBtnActionPerformed
         String fullName, email, Password, query, PhoneNo;
+        int notFound =0;
                 
                
                 String SUrl, SUser, SPass;
@@ -233,6 +238,19 @@ public class Signup1 extends javax.swing.JFrame {
                   //  Class.forName("com.mysql.cj.jdbc.Driver");
                     Connection con = DriverManager.getConnection(SUrl, SUser, SPass);
                     Statement st = con.createStatement();
+                    
+                    
+                    //check email already signed
+                    String ChkEmail = emailAddress.getText();
+                    String checkEmailQuery = "SELECT * FROM user WHERE email = '"+ChkEmail+"'";
+                           
+                    ResultSet rs = st.executeQuery(checkEmailQuery);
+                    if(rs.next()){
+                                    notFound = 1;
+                            } else {System.out.println("Not Found");}
+         
+                    
+                    
                     if("".equals(fname.getText())){
                         
                        JOptionPane.showMessageDialog(new JFrame(), "Full Name is required", "Error", 
@@ -245,6 +263,10 @@ public class Signup1 extends javax.swing.JFrame {
                         }
                     else if (!emailAddress.getText().endsWith("@gmail.com")){                                                                         
                          JOptionPane.showMessageDialog(new JFrame(), "Enter the Valid email is required", "Error", 
+                               JOptionPane.ERROR_MESSAGE );
+                        }
+                    else if ( notFound == 1){                                                                         
+                         JOptionPane.showMessageDialog(new JFrame(), "Your Email Address already in our System", "Error", 
                                JOptionPane.ERROR_MESSAGE );
                         }
                     else if("".equals(password.getText())){
@@ -284,7 +306,7 @@ public class Signup1 extends javax.swing.JFrame {
                          
                                  } 
                 }
-                catch(Exception e){
+                catch(HeadlessException | SQLException e){
                     System.out.println("Error! " +e.getMessage());
                 }
     }//GEN-LAST:event_SignupBtnActionPerformed
