@@ -27,7 +27,7 @@ public class Team3 {
     public static void main(String[] args) {
         
        java.awt.EventQueue.invokeLater(new Runnable() {
-            @Override
+            
             public void run() {
                 Login1 Login1Frame = new Login1();
                 Login1Frame.setVisible(true);
