@@ -52,7 +52,7 @@ public class Admin_Home extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setLayout(null);
 
-        jPanel7.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel7.setBackground(new java.awt.Color(0, 102, 102));
         jPanel7.setLayout(null);
 
         jLabel3.setText("Age:");

@@ -53,7 +53,7 @@ public class Add_Medic extends javax.swing.JFrame {
 
         jPanel1.setLayout(null);
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setBackground(new java.awt.Color(0, 102, 102));
         jPanel2.setLayout(null);
 
         inqu.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N

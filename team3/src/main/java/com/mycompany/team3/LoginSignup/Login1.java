@@ -66,7 +66,6 @@ public class Login1 extends javax.swing.JFrame {
         jPanel2.setPreferredSize(new java.awt.Dimension(400, 500));
         jPanel2.setLayout(null);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("D:\\NetBeans\\OOP PP\\OOP_CodeSquad_new new 1\\OOP_CodeSquad_2024\\team3\\src\\main\\java\\com\\mycompany\\team3\\LoginSignup\\reererer.png")); // NOI18N
         jLabel1.setText("jLabel1");
         jPanel2.add(jLabel1);
         jLabel1.setBounds(90, 60, 210, 190);
@@ -76,13 +75,13 @@ public class Login1 extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("MediCare Plus ");
         jPanel2.add(jLabel2);
-        jLabel2.setBounds(50, 290, 291, 50);
+        jLabel2.setBounds(60, 250, 291, 50);
 
         jLabel3.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Copyright © 2025 Medicare Plus. All rights reserved");
         jPanel2.add(jLabel3);
-        jLabel3.setBounds(50, 430, 280, 16);
+        jLabel3.setBounds(60, 460, 280, 16);
 
         left.add(jPanel2);
         jPanel2.setBounds(0, 0, 400, 500);

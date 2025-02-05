@@ -50,6 +50,8 @@ public class Doctor_Home extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setLayout(null);
 
+        jPanel4.setBackground(new java.awt.Color(0, 102, 102));
+
         jLabel1.setText("Age:");
 
         jButton1.setText("Edit Profile");
