@@ -38,6 +38,7 @@ public class Admin_Home extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
@@ -99,6 +100,10 @@ public class Admin_Home extends javax.swing.JFrame {
 
         jPanel7.add(jPanel8);
         jPanel8.setBounds(0, 0, 170, 270);
+
+        jLabel1.setBackground(new java.awt.Color(0, 153, 51));
+        jPanel7.add(jLabel1);
+        jLabel1.setBounds(410, 160, 90, 0);
 
         jButton4.setText("Log Out");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -201,7 +206,11 @@ public class Admin_Home extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        // TODO add your handling code here:
+       
+        
+        
+        jLabel1.setText("24");
+        
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
@@ -281,6 +290,7 @@ public class Admin_Home extends javax.swing.JFrame {
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
