@@ -11,10 +11,15 @@ The following main business requirements have been discussed by the client:
 # OOP_CodeSquad_2024
 Member IT Number	Tasks Allocated by Numbers separated by a comma
 SA24610070                             1,2	
+
 SA24610066	                      3,4
+
 SA24610221	                       -------------
+
 SA24610134	                        5
+
 SA24610069	                        6
+
 SA24610151	                        7
 
 
