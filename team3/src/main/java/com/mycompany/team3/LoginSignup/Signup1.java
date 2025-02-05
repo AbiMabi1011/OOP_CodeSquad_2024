@@ -69,7 +69,7 @@ public class Signup1 extends javax.swing.JFrame {
         jPanel2.setPreferredSize(new java.awt.Dimension(400, 500));
         jPanel2.setLayout(null);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/team3/LoginSignup/reererer.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon("D:\\NetBeans one\\Project Clone\\OOP_CodeSquad_2024\\team3\\src\\Logo.png")); // NOI18N
         jLabel1.setText("jLabel1");
         jPanel2.add(jLabel1);
         jLabel1.setBounds(90, 60, 210, 190);
@@ -79,7 +79,7 @@ public class Signup1 extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("MediCare Plus ");
         jPanel2.add(jLabel2);
-        jLabel2.setBounds(50, 290, 294, 50);
+        jLabel2.setBounds(50, 290, 291, 50);
 
         jLabel3.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
@@ -107,7 +107,7 @@ public class Signup1 extends javax.swing.JFrame {
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("MediCare Plus ");
         jPanel3.add(jLabel5);
-        jLabel5.setBounds(50, 290, 294, 50);
+        jLabel5.setBounds(50, 290, 291, 50);
 
         jLabel6.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
@@ -206,7 +206,7 @@ public class Signup1 extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 801, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 800, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

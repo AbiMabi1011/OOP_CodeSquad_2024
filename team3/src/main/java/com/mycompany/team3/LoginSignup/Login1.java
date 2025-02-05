@@ -40,9 +40,9 @@ public class Login1 extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         left = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -65,24 +65,23 @@ public class Login1 extends javax.swing.JFrame {
         jPanel2.setPreferredSize(new java.awt.Dimension(400, 500));
         jPanel2.setLayout(null);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/team3/LoginSignup/reererer.png"))); // NOI18N
-        jLabel1.setText("jLabel1");
-        jLabel1.setPreferredSize(new java.awt.Dimension(800, 500));
-        jPanel2.add(jLabel1);
-        jLabel1.setBounds(90, 60, 210, 190);
-
         jLabel2.setBackground(new java.awt.Color(255, 255, 255));
         jLabel2.setFont(new java.awt.Font("Showcard Gothic", 3, 36)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("MediCare Plus ");
         jPanel2.add(jLabel2);
-        jLabel2.setBounds(50, 290, 294, 50);
+        jLabel2.setBounds(50, 290, 291, 50);
 
         jLabel3.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Copyright © 2025 Medicare Plus. All rights reserved");
         jPanel2.add(jLabel3);
         jLabel3.setBounds(50, 430, 280, 16);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon("D:\\NetBeans one\\Project Clone\\OOP_CodeSquad_2024\\team3\\src\\Logo.png")); // NOI18N
+        jLabel1.setText("jLabel1");
+        jPanel2.add(jLabel1);
+        jLabel1.setBounds(110, 60, 220, 180);
 
         left.add(jPanel2);
         jPanel2.setBounds(0, 0, 400, 500);
@@ -105,6 +104,7 @@ public class Login1 extends javax.swing.JFrame {
         jLabel6.setBounds(420, 120, 120, 30);
 
         emailtoPhone.setFont(new java.awt.Font("Segoe UI Emoji", 0, 16)); // NOI18N
+        emailtoPhone.setPreferredSize(new java.awt.Dimension(800, 500));
         left.add(emailtoPhone);
         emailtoPhone.setBounds(420, 160, 330, 30);
         left.add(password);
@@ -147,15 +147,11 @@ public class Login1 extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 148, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 97, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -203,7 +199,7 @@ public class Login1 extends javax.swing.JFrame {
                                           JOptionPane.ERROR_MESSAGE);
                     }
                  
-                else if(("".equals(password.getText())) || (password.getText().length() !=6)){
+                else if ("".equals(password.getText())) {
                         
                        JOptionPane.showMessageDialog(new JFrame(), "Must be Enter the password with minimum 6 charactors", "Error", 
                                JOptionPane.ERROR_MESSAGE );
