@@ -10,6 +10,7 @@ The following main business requirements have been discussed by the client:
 7. Notify Pharmacists when medication stocks are low.
 # OOP_CodeSquad_2024
 Member IT Number	Tasks Allocated by Numbers separated by a comma
+
 SA24610070                             1,2	
 
 SA24610066	                      3,4
