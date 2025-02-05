@@ -62,7 +62,6 @@ public class Signup1 extends javax.swing.JFrame {
         jLabel13 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(800, 500));
 
         jPanel1.setLayout(null);
 
@@ -79,13 +78,13 @@ public class Signup1 extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("MediCare Plus ");
         jPanel2.add(jLabel2);
-        jLabel2.setBounds(60, 250, 291, 50);
+        jLabel2.setBounds(50, 290, 291, 50);
 
         jLabel3.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Copyright © 2025 Medicare Plus. All rights reserved");
         jPanel2.add(jLabel3);
-        jLabel3.setBounds(60, 480, 280, 16);
+        jLabel3.setBounds(50, 430, 280, 16);
 
         jPanel1.add(jPanel2);
         jPanel2.setBounds(0, 0, 400, 500);
