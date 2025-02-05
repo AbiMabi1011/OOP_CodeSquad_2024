@@ -47,57 +47,60 @@ public class Add_Medic extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jPanel3 = new javax.swing.JPanel();
+        jPanel4 = new javax.swing.JPanel();
+        jButton5 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
         jPanel1.setLayout(null);
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setBackground(new java.awt.Color(0, 102, 102));
         jPanel2.setLayout(null);
 
         inqu.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         inqu.setText("Quantity");
         jPanel2.add(inqu);
-        inqu.setBounds(120, 160, 75, 25);
+        inqu.setBounds(70, 260, 75, 25);
 
         inpr.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         inpr.setText("Price  ");
         jPanel2.add(inpr);
-        inpr.setBounds(140, 210, 52, 25);
+        inpr.setBounds(460, 130, 52, 25);
 
         inma.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         inma.setText("Manufacturer");
         jPanel2.add(inma);
-        inma.setBounds(80, 260, 117, 25);
+        inma.setBounds(70, 330, 117, 25);
 
         inex.setBackground(new java.awt.Color(0, 0, 0));
         inex.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         inex.setText("Expiry Date ");
         jPanel2.add(inex);
-        inex.setBounds(100, 320, 103, 25);
+        inex.setBounds(460, 190, 103, 25);
 
         inname1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         inname1.setText("Inventory Name");
         jPanel2.add(inname1);
-        inname1.setBounds(60, 110, 138, 25);
+        inname1.setBounds(60, 200, 138, 25);
         jPanel2.add(jTextField1);
-        jTextField1.setBounds(220, 320, 180, 30);
+        jTextField1.setBounds(580, 190, 180, 30);
         jPanel2.add(jTextField2);
-        jTextField2.setBounds(220, 70, 180, 30);
+        jTextField2.setBounds(230, 130, 180, 30);
         jPanel2.add(jTextField3);
-        jTextField3.setBounds(220, 110, 180, 30);
+        jTextField3.setBounds(230, 190, 180, 30);
         jPanel2.add(jTextField4);
-        jTextField4.setBounds(220, 150, 180, 30);
+        jTextField4.setBounds(230, 260, 180, 30);
 
         inname.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         inname.setText("Inventory ID");
         jPanel2.add(inname);
-        inname.setBounds(90, 70, 107, 25);
+        inname.setBounds(70, 130, 107, 25);
         jPanel2.add(jTextField5);
-        jTextField5.setBounds(220, 210, 180, 30);
+        jTextField5.setBounds(230, 330, 180, 30);
         jPanel2.add(jTextField6);
-        jTextField6.setBounds(220, 260, 180, 30);
+        jTextField6.setBounds(580, 130, 180, 30);
 
         jPanel8.setBackground(new java.awt.Color(204, 204, 204));
 
@@ -131,34 +134,35 @@ public class Add_Medic extends javax.swing.JFrame {
             .addGroup(jPanel8Layout.createSequentialGroup()
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel8Layout.createSequentialGroup()
-                        .addContainerGap()
+                        .addGap(17, 17, 17)
                         .addComponent(inid, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel8Layout.createSequentialGroup()
-                        .addGap(48, 48, 48)
-                        .addComponent(jLabel5))
-                    .addGroup(jPanel8Layout.createSequentialGroup()
-                        .addGap(77, 77, 77)
-                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(22, Short.MAX_VALUE))
+                        .addGap(51, 51, 51)
+                        .addComponent(jLabel5)))
+                .addContainerGap(11, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(66, 66, 66))
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel8Layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(12, 12, 12)
                 .addComponent(jLabel5)
-                .addGap(18, 18, 18)
-                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(inid, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(inid, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(11, Short.MAX_VALUE))
+                .addContainerGap(19, Short.MAX_VALUE))
         );
 
         jPanel2.add(jPanel8);
-        jPanel8.setBounds(470, 291, 300, 170);
+        jPanel8.setBounds(470, 260, 300, 170);
 
         jButton1.setText("Back");
         jPanel2.add(jButton1);
@@ -167,6 +171,49 @@ public class Add_Medic extends javax.swing.JFrame {
         jButton2.setText("Save");
         jPanel2.add(jButton2);
         jButton2.setBounds(330, 410, 90, 30);
+
+        jPanel3.setBackground(new java.awt.Color(0, 51, 51));
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 790, Short.MAX_VALUE)
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 10, Short.MAX_VALUE)
+        );
+
+        jPanel2.add(jPanel3);
+        jPanel3.setBounds(0, 10, 790, 10);
+
+        jPanel4.setBackground(new java.awt.Color(0, 51, 51));
+
+        jButton5.setBackground(new java.awt.Color(0, 51, 51));
+        jButton5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jButton5.setForeground(new java.awt.Color(255, 255, 255));
+        jButton5.setText("HOME");
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jButton5)
+                .addContainerGap(722, Short.MAX_VALUE))
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addContainerGap(7, Short.MAX_VALUE)
+                .addComponent(jButton5)
+                .addContainerGap())
+        );
+
+        jPanel2.add(jPanel4);
+        jPanel4.setBounds(0, 460, 800, 40);
 
         jPanel1.add(jPanel2);
         jPanel2.setBounds(0, 0, 800, 500);
@@ -231,9 +278,12 @@ public class Add_Medic extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
