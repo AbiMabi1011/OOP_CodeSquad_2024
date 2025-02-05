@@ -4,6 +4,16 @@
  */
 package com.mycompany.team3.Pharmacist;
 
+import java.awt.HeadlessException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import static javax.swing.JOptionPane.showMessageDialog;
+
 /**
  *
  * @author Keert
@@ -33,17 +43,17 @@ public class Add_Medic extends javax.swing.JFrame {
         inma = new javax.swing.JLabel();
         inex = new javax.swing.JLabel();
         inname1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
+        Expiry_date = new javax.swing.JTextField();
+        Inventory_ID = new javax.swing.JTextField();
+        Inventory_Name = new javax.swing.JTextField();
+        In_Quantity = new javax.swing.JTextField();
         inname = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
+        Manufacturer = new javax.swing.JTextField();
+        Inve_Price = new javax.swing.JTextField();
         jPanel8 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         inid = new javax.swing.JLabel();
-        jTextField9 = new javax.swing.JTextField();
+        Inventory_ID_Del = new javax.swing.JTextField();
         jButton3 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
@@ -84,23 +94,29 @@ public class Add_Medic extends javax.swing.JFrame {
         inname1.setText("Inventory Name");
         jPanel2.add(inname1);
         inname1.setBounds(60, 200, 138, 25);
-        jPanel2.add(jTextField1);
-        jTextField1.setBounds(580, 190, 180, 30);
-        jPanel2.add(jTextField2);
-        jTextField2.setBounds(230, 130, 180, 30);
-        jPanel2.add(jTextField3);
-        jTextField3.setBounds(230, 190, 180, 30);
-        jPanel2.add(jTextField4);
-        jTextField4.setBounds(230, 260, 180, 30);
+        jPanel2.add(Expiry_date);
+        Expiry_date.setBounds(580, 190, 180, 30);
+        jPanel2.add(Inventory_ID);
+        Inventory_ID.setBounds(230, 130, 180, 30);
+        jPanel2.add(Inventory_Name);
+        Inventory_Name.setBounds(230, 190, 180, 30);
+        jPanel2.add(In_Quantity);
+        In_Quantity.setBounds(230, 260, 180, 30);
 
         inname.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         inname.setText("Inventory ID");
         jPanel2.add(inname);
         inname.setBounds(70, 130, 107, 25);
-        jPanel2.add(jTextField5);
-        jTextField5.setBounds(230, 330, 180, 30);
-        jPanel2.add(jTextField6);
-        jTextField6.setBounds(580, 130, 180, 30);
+        jPanel2.add(Manufacturer);
+        Manufacturer.setBounds(230, 330, 180, 30);
+
+        Inve_Price.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Inve_PriceActionPerformed(evt);
+            }
+        });
+        jPanel2.add(Inve_Price);
+        Inve_Price.setBounds(580, 130, 180, 30);
 
         jPanel8.setBackground(new java.awt.Color(204, 204, 204));
 
@@ -110,9 +126,9 @@ public class Add_Medic extends javax.swing.JFrame {
         inid.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         inid.setText("Inventory ID");
 
-        jTextField9.addActionListener(new java.awt.event.ActionListener() {
+        Inventory_ID_Del.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField9ActionPerformed(evt);
+                Inventory_ID_DelActionPerformed(evt);
             }
         });
 
@@ -137,7 +153,7 @@ public class Add_Medic extends javax.swing.JFrame {
                         .addGap(17, 17, 17)
                         .addComponent(inid, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(Inventory_ID_Del, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel8Layout.createSequentialGroup()
                         .addGap(51, 51, 51)
                         .addComponent(jLabel5)))
@@ -154,7 +170,7 @@ public class Add_Medic extends javax.swing.JFrame {
                 .addComponent(jLabel5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Inventory_ID_Del, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(inid, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -169,6 +185,12 @@ public class Add_Medic extends javax.swing.JFrame {
         jButton1.setBounds(230, 410, 90, 30);
 
         jButton2.setText("Save");
+        jButton2.setPreferredSize(new java.awt.Dimension(800, 500));
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         jPanel2.add(jButton2);
         jButton2.setBounds(330, 410, 90, 30);
 
@@ -193,7 +215,12 @@ public class Add_Medic extends javax.swing.JFrame {
         jButton5.setBackground(new java.awt.Color(0, 51, 51));
         jButton5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton5.setForeground(new java.awt.Color(255, 255, 255));
-        jButton5.setText("HOME");
+        jButton5.setText("Back");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -224,13 +251,184 @@ public class Add_Medic extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField9ActionPerformed
+    private void Inventory_ID_DelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Inventory_ID_DelActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField9ActionPerformed
+    }//GEN-LAST:event_Inventory_ID_DelActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
+        // Inventory_ID_Del
+         String Pemail;
+
+        String SUrl, SUser, SPass;
+        SUrl = "jdbc:MySQL://localhost:3306/java_user_database";
+        SUser = "root";
+        SPass = "";
+
+        try{
+            Connection con = DriverManager.getConnection(SUrl, SUser, SPass);
+            Statement st = con.createStatement();
+
+            if("".equals(Inventory_ID_Del.getText())){
+
+                JOptionPane.showMessageDialog(new JFrame(), "Please Enter Your Inventory IDto delete your Account", "Error",
+                    JOptionPane.ERROR_MESSAGE );
+            }
+            
+
+            else{
+
+                Pemail = Inventory_ID_Del.getText();
+                //Inventory_ID = '"+INventory_ID+"'";
+
+                String Searchemail = "SELECT * FROM inventory_details WHERE Inventory_ID  = '"+Pemail+"'";
+
+                String DeleterowQuery = "DELETE FROM inventory_details WHERE Inventory_ID  = '"+Pemail+"'"; 
+
+                ResultSet rs = st.executeQuery(Searchemail);
+
+                if(rs.next()){
+                    st.execute(DeleterowQuery);
+
+                    JOptionPane.showMessageDialog(new JFrame(), "Your Inventory t Deleted!", "Error",
+                        JOptionPane.ERROR_MESSAGE );
+
+                }
+                else{
+                    JOptionPane.showMessageDialog(new JFrame(), "No Inventory  Found ", "Error",
+                        JOptionPane.ERROR_MESSAGE );
+                }
+
+            }
+
+        }
+
+        catch(HeadlessException | SQLException e){
+            System.out.println("Error! " +e.getMessage());
+        }
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+       
+            Pharmacist_Home   Pharmacist_HomeFrame = new  Pharmacist_Home();
+            Pharmacist_HomeFrame.setVisible(true);
+            Pharmacist_HomeFrame.pack();
+            Pharmacist_HomeFrame.setLocationRelativeTo(null);
+            this.dispose();
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void Inve_PriceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Inve_PriceActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Inve_PriceActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    //    Inventory_ID ,  Inventory_Name,  In_Quantity, Manufacturer,  Inve_Price,  Expiry_date
+     String INventory_ID ,  INventory_Name,  IN_Quantity, MAnufacturer,  INve_Price,  EXpiry_date,query ;
+        
+            int notFound =0;
+                
+               
+                String SUrl, SUser, SPass;
+              /*  private static final String URL = "jdbc:mysql://localhost:3306/mydatabase"; // Change DB name
+                private static final String USER = "root";  // Default XAMPP MySQL user
+                private static final String PASSWORD = "";  // Default password is empty
+              */  
+                SUrl = "jdbc:MySQL://localhost:3306/java_user_database";
+                SUser = "root";
+                SPass = "";
+                
+                try{
+                  //  Class.forName("com.mysql.cj.jdbc.Driver");
+                    Connection con = DriverManager.getConnection(SUrl, SUser, SPass);
+                    Statement st = con.createStatement();
+                    
+                    
+                    //check email already signed
+                    String ChkEmail = Inventory_ID.getText();
+                    String checkEmailQuery = "SELECT * FROM inventory_details WHERE Inventory_ID = '"+ChkEmail+"'";
+                           
+                   ResultSet rs = st.executeQuery(checkEmailQuery); 
+                    if(rs.next()){
+                                    notFound = 1;
+                            } else {System.out.println("Not Found");}
+         
+                    
+                    
+                    if("".equals(Inventory_ID.getText())){
+                        
+                       JOptionPane.showMessageDialog(new JFrame(), "Inventory_ID is required", "Error", 
+                               JOptionPane.ERROR_MESSAGE );
+                        }
+                    else if("".equals(Inventory_Name.getText())){
+                        
+                       JOptionPane.showMessageDialog(new JFrame(), "Inventory Name is required", "Error", 
+                               JOptionPane.ERROR_MESSAGE );
+                        }
+                    
+                    else if ( notFound == 1){                                                                         
+                         JOptionPane.showMessageDialog(new JFrame(), "Inventory_ID already in our System", "Error", 
+                               JOptionPane.ERROR_MESSAGE );
+                        }
+                    else if("".equals(In_Quantity.getText())){
+                        
+                       JOptionPane.showMessageDialog(new JFrame(), "Quantityd is required", "Error", 
+                               JOptionPane.ERROR_MESSAGE );
+                        }
+                     else if("".equals(Manufacturer.getText())){
+                        
+                       JOptionPane.showMessageDialog(new JFrame(), "Manufacturer is required", "Error", 
+                               JOptionPane.ERROR_MESSAGE );
+                        }
+                     else if("".equals(Inve_Price.getText())) {  
+                         JOptionPane.showMessageDialog(new JFrame(), "Inventory_Price is required", "Error", 
+                               JOptionPane.ERROR_MESSAGE );
+      
+                        }
+                     else if("".equals(Expiry_date.getText())) { 
+                         JOptionPane.showMessageDialog(new JFrame(), "Expiry date is required", "Error", 
+                               JOptionPane.ERROR_MESSAGE );
+                        }
+                        
+                    
+                     else{
+                         INventory_ID = Inventory_ID.getText();
+                         INventory_Name = Inventory_Name.getText();
+                         IN_Quantity =  In_Quantity.getText();
+                         MAnufacturer =  Manufacturer.getText();
+                         INve_Price =  Inve_Price.getText();
+                         EXpiry_date = Expiry_date.getText();
+                         
+                 
+                         query = "INSERT INTO inventory_details (Inventory_ID ,  Inventory_Name,  In_Quantity, Manufacturer,  Inve_Price,  Expiry_date)" +
+                                 "VALUES('"+INventory_ID+"', '"+INventory_Name+"', '"+IN_Quantity+"', '"+MAnufacturer+"', '"+INve_Price+"', '"+EXpiry_date+"')"; 
+                         
+                          String Searchemail = "SELECT * FROM inventory_details WHERE Inventory_ID = '"+INventory_ID+"'";
+
+                         rs = st.executeQuery(Searchemail);
+                        if(rs.next()){
+                         showMessageDialog(null, "Already Have an Inventory");
+                             }
+                         else {
+                            st.execute(query);
+                           showMessageDialog(null, "New Inventory has been created successfully!");
+                             }
+
+                         
+                        
+                    /*    Inventory_ID.setText("");
+                        Inventory_Name.setText("");
+                        In_Quantity.setText("");
+                        Manufacturer.setText("");
+                        Inve_Price.setText("");
+                        Expiry_date.setText("");*/
+                         
+                  //       showMessageDialog(null, "New Account has been created successfully!");
+                         
+                                 } 
+                }
+                catch(HeadlessException | SQLException e){
+                    System.out.println("Error! " +e.getMessage());
+                }
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -268,6 +466,13 @@ public class Add_Medic extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField Expiry_date;
+    private javax.swing.JTextField In_Quantity;
+    private javax.swing.JTextField Inve_Price;
+    private javax.swing.JTextField Inventory_ID;
+    private javax.swing.JTextField Inventory_ID_Del;
+    private javax.swing.JTextField Inventory_Name;
+    private javax.swing.JTextField Manufacturer;
     private javax.swing.JLabel inex;
     private javax.swing.JLabel inid;
     private javax.swing.JLabel inma;
@@ -285,12 +490,5 @@ public class Add_Medic extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel8;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField9;
     // End of variables declaration//GEN-END:variables
 }

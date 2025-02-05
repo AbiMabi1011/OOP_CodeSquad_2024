@@ -115,14 +115,14 @@ public class Edit_ProfilePhar extends javax.swing.JFrame {
         jLabel1.setBounds(10, 20, 240, 30);
 
         jLabel5.setFont(new java.awt.Font("Rockwell", 1, 16)); // NOI18N
-        jLabel5.setText("insurance ID ");
+        jLabel5.setText("SLMD");
         jPanel4.add(jLabel5);
-        jLabel5.setBounds(20, 40, 105, 30);
+        jLabel5.setBounds(20, 40, 60, 30);
 
         jLabel8.setFont(new java.awt.Font("Rockwell", 0, 16)); // NOI18N
         jLabel8.setText("number ?");
         jPanel4.add(jLabel8);
-        jLabel8.setBounds(130, 40, 70, 30);
+        jLabel8.setBounds(70, 40, 70, 30);
 
         jPanel5.setLayout(null);
 
@@ -694,6 +694,5 @@ public class Edit_ProfilePhar extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
-    private javax.swing.JPanel jPanel8;
     // End of variables declaration//GEN-END:variables
 }
