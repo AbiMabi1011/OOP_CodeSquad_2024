@@ -109,14 +109,14 @@ public class Edit_Profile_Admin extends javax.swing.JFrame {
         jLabel1.setBounds(10, 0, 240, 30);
 
         jLabel5.setFont(new java.awt.Font("Rockwell", 1, 16)); // NOI18N
-        jLabel5.setText("insurance ID ");
+        jLabel5.setText("SLIIT ID ");
         jPanel4.add(jLabel5);
-        jLabel5.setBounds(10, 20, 105, 30);
+        jLabel5.setBounds(10, 20, 70, 30);
 
         jLabel8.setFont(new java.awt.Font("Rockwell", 0, 16)); // NOI18N
         jLabel8.setText("number ?");
         jPanel4.add(jLabel8);
-        jLabel8.setBounds(120, 20, 70, 30);
+        jLabel8.setBounds(80, 20, 70, 30);
 
         jPanel5.setLayout(null);
 
