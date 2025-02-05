@@ -353,11 +353,11 @@ public class Edit_Profile extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ComponentHidden
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        Doctor_Home  Doctor_HomeFrame = new Doctor_Home();
+   /*     Doctor_Home  Doctor_HomeFrame = new Doctor_Home();
         Doctor_HomeFrame.setVisible(true);
         Doctor_HomeFrame.pack();
         Doctor_HomeFrame.setLocationRelativeTo(null);
-        this.dispose();
+        this.dispose();*/
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ComponentHidden(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jButton2ComponentHidden
@@ -518,7 +518,7 @@ public class Edit_Profile extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         //update
-        String Pname, Gencompo,Page, Pemail,  Pphone, Paddress, PinsurID, query, Specials;
+   //     String Pname, Gencompo,Page, Pemail,  Pphone, Paddress, PinsurID, query, Specials;
 
         String SUrl, SUser, SPass;
         /*  private static final String URL = "jdbc:mysql://localhost:3306/mydatabase"; // Change DB name
@@ -532,7 +532,7 @@ public class Edit_Profile extends javax.swing.JFrame {
         try{
             //  Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection(SUrl, SUser, SPass);
-            Statement st = con.createStatement();
+       //     Statement st = con.createStatement();
             if("".equals(Name.getText())){
 
                 JOptionPane.showMessageDialog(new JFrame(), "Full Name is required", "Error",
@@ -581,13 +581,11 @@ public class Edit_Profile extends javax.swing.JFrame {
 
                 String Address12 = Name7.getText() +"," + Name8.getText();
 
-                Pname =  Name.getText();
+        //        Pname =  Name.getText();
           //      Gencompo =  selectedValue;
-                Page = Name4.getText();
-                Pemail = Name5.getText();
-                Pphone = Name6.getText();
-                Paddress = Address12;
-                PinsurID = PInsurID.getText();
+         //       Page = Name4.getText();
+         //       Pemail = Name5.getText();
+         //       PinsurID = PInsurID.getText();
         //        Specials = Special;
 
                 System.out.println("Data Entered");
