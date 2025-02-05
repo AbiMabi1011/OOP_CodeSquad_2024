@@ -591,7 +591,7 @@ public class Edit_ProfilePhar extends javax.swing.JFrame {
                     showMessageDialog(null, "New Account has been created successfully!");
                 }
 
-                st.execute(query1);
+               // st.execute(query1);
 
             }
         }

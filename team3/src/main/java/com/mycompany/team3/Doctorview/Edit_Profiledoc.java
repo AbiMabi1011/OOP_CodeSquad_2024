@@ -41,7 +41,7 @@ public class Edit_Profiledoc extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        genders = new javax.swing.JComboBox<>();
         jLabel3 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -56,12 +56,12 @@ public class Edit_Profiledoc extends javax.swing.JFrame {
         PInsurID = new javax.swing.JTextField();
         jLabel13 = new javax.swing.JLabel();
         Name = new javax.swing.JTextField();
-        Name4 = new javax.swing.JTextField();
-        Name5 = new javax.swing.JTextField();
-        Name6 = new javax.swing.JTextField();
-        Name7 = new javax.swing.JTextField();
+        AGE = new javax.swing.JTextField();
+        EMAIL = new javax.swing.JTextField();
+        Telephone = new javax.swing.JTextField();
+        Address2 = new javax.swing.JTextField();
         jLabel14 = new javax.swing.JLabel();
-        Name8 = new javax.swing.JTextField();
+        Address1 = new javax.swing.JTextField();
         jLabel16 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
@@ -75,26 +75,41 @@ public class Edit_Profiledoc extends javax.swing.JFrame {
         jPanel1.setLayout(null);
 
         jPanel3.setBackground(new java.awt.Color(0, 102, 102));
+        jPanel3.setLayout(null);
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel2.setText("Name");
+        jPanel3.add(jLabel2);
+        jLabel2.setBounds(8, 12, 60, 33);
 
         jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel9.setText("Gender");
+        jPanel3.add(jLabel9);
+        jLabel9.setBounds(6, 53, 70, 28);
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel7.setText("Age");
+        jPanel3.add(jLabel7);
+        jLabel7.setBounds(6, 93, 62, 30);
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Male", "Female", "Other" }));
+        genders.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Male", "Female", "Other" }));
+        jPanel3.add(genders);
+        genders.setBounds(100, 60, 235, 28);
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel3.setText("Address ");
+        jPanel3.add(jLabel3);
+        jLabel3.setBounds(6, 223, 92, 25);
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel6.setText("Email  ");
+        jPanel3.add(jLabel6);
+        jLabel6.setBounds(6, 145, 56, 25);
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel4.setText("Tel");
+        jPanel3.add(jLabel4);
+        jLabel4.setBounds(6, 182, 26, 30);
 
         jPanel4.setBackground(new java.awt.Color(204, 204, 204));
         jPanel4.setLayout(null);
@@ -146,11 +161,36 @@ public class Edit_Profiledoc extends javax.swing.JFrame {
         jPanel4.add(jLabel13);
         jLabel13.setBounds(70, 110, 120, 19);
 
+        jPanel3.add(jPanel4);
+        jPanel4.setBounds(489, 238, 260, 140);
+        jPanel3.add(Name);
+        Name.setBounds(99, 15, 235, 33);
+        jPanel3.add(AGE);
+        AGE.setBounds(100, 100, 126, 30);
+        jPanel3.add(EMAIL);
+        EMAIL.setBounds(100, 150, 235, 33);
+        jPanel3.add(Telephone);
+        Telephone.setBounds(100, 190, 235, 33);
+
+        Address2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Address2ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(Address2);
+        Address2.setBounds(90, 310, 235, 33);
+
         jLabel14.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel14.setText("Line 1");
+        jPanel3.add(jLabel14);
+        jLabel14.setBounds(12, 254, 50, 25);
+        jPanel3.add(Address1);
+        Address1.setBounds(90, 260, 235, 33);
 
         jLabel16.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel16.setText("Line 2");
+        jPanel3.add(jLabel16);
+        jLabel16.setBounds(12, 298, 50, 25);
 
         jButton1.setText("Back");
         jButton1.addComponentListener(new java.awt.event.ComponentAdapter() {
@@ -163,6 +203,8 @@ public class Edit_Profiledoc extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
+        jPanel3.add(jButton1);
+        jButton1.setBounds(23, 468, 90, 30);
 
         jButton2.setText("Save");
         jButton2.addComponentListener(new java.awt.event.ComponentAdapter() {
@@ -175,6 +217,8 @@ public class Edit_Profiledoc extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
+        jPanel3.add(jButton2);
+        jButton2.setBounds(292, 468, 90, 30);
 
         jButton3.setText("Delete Your Acoount");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -182,6 +226,8 @@ public class Edit_Profiledoc extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
+        jPanel3.add(jButton3);
+        jButton3.setBounds(579, 471, 170, 23);
 
         jButton4.setText("Update");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -189,137 +235,17 @@ public class Edit_Profiledoc extends javax.swing.JFrame {
                 jButton4ActionPerformed(evt);
             }
         });
+        jPanel3.add(jButton4);
+        jButton4.setBounds(439, 468, 81, 30);
 
         jLabel17.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel17.setText("Specilation");
+        jPanel3.add(jLabel17);
+        jLabel17.setBounds(489, 81, 94, 25);
 
         SpecialComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "General", "Neurosurgeon", "Orthopedic", "Cardiothoracic", "Plastic", "Ophthalmic", "Pediatric" }));
-
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(8, 8, 8)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel4))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel6))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addGap(6, 6, 6)
-                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel16)
-                                    .addComponent(jLabel14))))))
-                .addGap(12, 12, 12)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(Name, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 435, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(Name6, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Name5, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Name7, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Name8, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Name4, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(SpecialComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jLabel17))
-                                        .addGap(25, 25, 25))
-                                    .addComponent(jPanel4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(31, 31, 31))))
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(57, 57, 57)
-                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(260, 260, 260))
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(81, 81, 81)
-                        .addComponent(jLabel17)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(SpecialComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(5, 5, 5)
-                        .addComponent(jLabel6))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(12, 12, 12)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(8, 8, 8)
-                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(31, 31, 31)
-                        .addComponent(Name, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(Name4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Name5, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
-                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(90, 90, 90))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel14)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel16)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(Name7, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(Name8, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(50, 50, 50))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(Name6, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)))))
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton3))
-                .addGap(32, 32, 32))
-        );
+        jPanel3.add(SpecialComboBox);
+        SpecialComboBox.setBounds(489, 112, 235, 28);
 
         jPanel1.add(jPanel3);
         jPanel3.setBounds(0, 0, 780, 530);
@@ -380,42 +306,42 @@ public class Edit_Profiledoc extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(new JFrame(), "Full Name is required", "Error",
                     JOptionPane.ERROR_MESSAGE );
             }
-            else if("".equals(Name5.getText())){
+            else if("".equals(EMAIL.getText())){
 
                 JOptionPane.showMessageDialog(new JFrame(), "Email Name is required", "Error",
                     JOptionPane.ERROR_MESSAGE );
             }
-            else if (!Name5.getText().endsWith("@gmail.com")){
+            else if (!EMAIL.getText().endsWith("@gmail.com")){
                 JOptionPane.showMessageDialog(new JFrame(), "Enter the Valid email is required", "Error",
                     JOptionPane.ERROR_MESSAGE );
             }
-            else if("".equals(Name4.getText())){
+            else if("".equals(AGE.getText())){
 
                 JOptionPane.showMessageDialog(new JFrame(), "Age is required", "Error",
                     JOptionPane.ERROR_MESSAGE );
             }
-            else if("".equals(Name6.getText())){
+            else if("".equals(Telephone.getText())){
 
                 JOptionPane.showMessageDialog(new JFrame(), "Phone Number is required", "Error",
                     JOptionPane.ERROR_MESSAGE );
             }
-            else if(Name6.getText().length() != 10) {
+            else if(Telephone.getText().length() != 10) {
                 JOptionPane.showMessageDialog(new JFrame(), "Enter the Valid Phone Number is required", "Error",
                     JOptionPane.ERROR_MESSAGE );
             }
-            else if("".equals(Name7.getText())){
+            else if("".equals(Address1.getText())){
 
                 JOptionPane.showMessageDialog(new JFrame(), "Address Line 1 is required", "Error",
                     JOptionPane.ERROR_MESSAGE );
             }
-            else if("".equals(Name8.getText())){
+            else if("".equals(Address2.getText())){
 
                 JOptionPane.showMessageDialog(new JFrame(), "Address Line 2 is required", "Error",
                     JOptionPane.ERROR_MESSAGE );
             }
 
             else{
-                String selectedValue = jComboBox1.getSelectedItem().toString();
+                String selectedValue = genders.getSelectedItem().toString();
                 System.out.println("Selected: " + selectedValue);
                 
                 String Special = SpecialComboBox.getSelectedItem().toString();
@@ -423,13 +349,13 @@ public class Edit_Profiledoc extends javax.swing.JFrame {
                 
                 
 
-                String Address12 = Name7.getText() +"," + Name8.getText();
+                String Address12 = Address2.getText() +"," + Address1.getText();
 
                 Pname =  Name.getText();
                 Gencompo =  selectedValue;
-                Page = Name4.getText();
-                Pemail = Name5.getText();
-                Pphone = Name6.getText();
+                Page = AGE.getText();
+                Pemail = EMAIL.getText();
+                Pphone = Telephone.getText();
                 Paddress = Address12;
                 PinsurID = PInsurID.getText();
                 Specials = Special;
@@ -471,19 +397,19 @@ public class Edit_Profiledoc extends javax.swing.JFrame {
             Connection con = DriverManager.getConnection(SUrl, SUser, SPass);
             Statement st = con.createStatement();
 
-            if("".equals(Name5.getText())){
+            if("".equals(EMAIL.getText())){
 
                 JOptionPane.showMessageDialog(new JFrame(), "Please Enter Your Email to delete your Account", "Error",
                     JOptionPane.ERROR_MESSAGE );
             }
-            else if (!Name5.getText().endsWith("@gmail.com")){
+            else if (!EMAIL.getText().endsWith("@gmail.com")){
                 JOptionPane.showMessageDialog(new JFrame(), "Enter the Valid email is required", "Error",
                     JOptionPane.ERROR_MESSAGE );
             }
 
             else{
 
-                Pemail = Name5.getText();
+                Pemail = EMAIL.getText();
 
                 String Searchemail = "SELECT * FROM Doctor_details WHERE Email = '"+Pemail+"'";
 
@@ -535,54 +461,54 @@ public class Edit_Profiledoc extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(new JFrame(), "Full Name is required", "Error",
                     JOptionPane.ERROR_MESSAGE );
             }
-            else if("".equals(Name5.getText())){
+            else if("".equals(EMAIL.getText())){
 
                 JOptionPane.showMessageDialog(new JFrame(), "Email Name is required", "Error",
                     JOptionPane.ERROR_MESSAGE );
             }
-            else if (!Name5.getText().endsWith("@gmail.com")){
+            else if (!EMAIL.getText().endsWith("@gmail.com")){
                 JOptionPane.showMessageDialog(new JFrame(), "Enter the Valid email is required", "Error",
                     JOptionPane.ERROR_MESSAGE );
             }
-            else if("".equals(Name4.getText())){
+            else if("".equals(AGE.getText())){
 
                 JOptionPane.showMessageDialog(new JFrame(), "Age is required", "Error",
                     JOptionPane.ERROR_MESSAGE );
             }
-            else if("".equals(Name6.getText())){
+            else if("".equals(Telephone.getText())){
 
                 JOptionPane.showMessageDialog(new JFrame(), "Phone Number is required", "Error",
                     JOptionPane.ERROR_MESSAGE );
             }
-            else if(Name6.getText().length() != 10) {
+            else if(Telephone.getText().length() != 10) {
                 JOptionPane.showMessageDialog(new JFrame(), "Enter the Valid Phone Number is required", "Error",
                     JOptionPane.ERROR_MESSAGE );
             }
-            else if("".equals(Name7.getText())){
+            else if("".equals(Address2.getText())){
 
                 JOptionPane.showMessageDialog(new JFrame(), "Address Line 1 is required", "Error",
                     JOptionPane.ERROR_MESSAGE );
             }
-            else if("".equals(Name8.getText())){
+            else if("".equals(Address1.getText())){
 
                 JOptionPane.showMessageDialog(new JFrame(), "Address Line 2 is required", "Error",
                     JOptionPane.ERROR_MESSAGE );
             }
 
             else{
-                String selectedValue = jComboBox1.getSelectedItem().toString();
+                String selectedValue = genders.getSelectedItem().toString();
                 System.out.println("Selected: " + selectedValue);
                 
                 String Special = SpecialComboBox.getSelectedItem().toString();
                 System.out.println("Selected: " + selectedValue);
 
-                String Address12 = Name7.getText() +"," + Name8.getText();
+                String Address12 = Address2.getText() +"," + Address1.getText();
 
                 Pname =  Name.getText();
                 Gencompo =  selectedValue;
-                Page = Name4.getText();
-                Pemail = Name5.getText();
-                Pphone = Name6.getText();
+                Page = AGE.getText();
+                Pemail = EMAIL.getText();
+                Pphone = Telephone.getText();
                 Paddress = Address12;
                 PinsurID = PInsurID.getText();
                 Specials = Special;
@@ -602,6 +528,10 @@ public class Edit_Profiledoc extends javax.swing.JFrame {
             System.out.println("Error! " +e.getMessage());
         }
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void Address2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Address2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Address2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -639,19 +569,19 @@ public class Edit_Profiledoc extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField AGE;
+    private javax.swing.JTextField Address1;
+    private javax.swing.JTextField Address2;
+    private javax.swing.JTextField EMAIL;
     private javax.swing.JTextField Name;
-    private javax.swing.JTextField Name4;
-    private javax.swing.JTextField Name5;
-    private javax.swing.JTextField Name6;
-    private javax.swing.JTextField Name7;
-    private javax.swing.JTextField Name8;
     private javax.swing.JTextField PInsurID;
     private javax.swing.JComboBox<String> SpecialComboBox;
+    private javax.swing.JTextField Telephone;
+    private javax.swing.JComboBox<String> genders;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;

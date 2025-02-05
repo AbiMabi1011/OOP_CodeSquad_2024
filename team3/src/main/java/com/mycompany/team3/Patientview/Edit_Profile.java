@@ -202,6 +202,11 @@ public class Edit_Profile extends javax.swing.JFrame {
         jLabel15.setText("Patient  Profile");
 
         GEncompo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Male", "Female", "Other" }));
+        GEncompo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                GEncompoActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -602,6 +607,10 @@ public class Edit_Profile extends javax.swing.JFrame {
     private void PInsurIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PInsurIDActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_PInsurIDActionPerformed
+
+    private void GEncompoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GEncompoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_GEncompoActionPerformed
         
        
         

@@ -4,7 +4,10 @@
  */
 package com.mycompany.team3.Adminview;
 
+import com.mycompany.team3.Doctorview.Doctor_Home;
 import com.mycompany.team3.LoginSignup.Login1;
+import com.mycompany.team3.Patientview.Patient_Home;
+import com.mycompany.team3.Pharmacist.Pharmacist_Home;
 
 /**
  *
@@ -37,7 +40,6 @@ public class Admin_Home extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
         jButton9 = new javax.swing.JButton();
@@ -116,15 +118,6 @@ public class Admin_Home extends javax.swing.JFrame {
         jPanel7.add(jButton5);
         jButton5.setBounds(470, 240, 220, 140);
 
-        jButton6.setText("Change Occupation");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
-            }
-        });
-        jPanel7.add(jButton6);
-        jButton6.setBounds(200, 60, 220, 140);
-
         jButton7.setText("Monthly Revenue");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -132,7 +125,7 @@ public class Admin_Home extends javax.swing.JFrame {
             }
         });
         jPanel7.add(jButton7);
-        jButton7.setBounds(470, 60, 220, 140);
+        jButton7.setBounds(340, 70, 220, 140);
 
         jButton8.setText("Patient Visit");
         jButton8.addActionListener(new java.awt.event.ActionListener() {
@@ -143,15 +136,30 @@ public class Admin_Home extends javax.swing.JFrame {
         jPanel7.add(jButton8);
         jButton8.setBounds(200, 240, 220, 140);
 
-        jButton9.setText("Inventory");
+        jButton9.setText("Pharmicst");
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
         jPanel7.add(jButton9);
         jButton9.setBounds(10, 390, 150, 40);
 
         jButton10.setText("Patient");
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton10ActionPerformed(evt);
+            }
+        });
         jPanel7.add(jButton10);
         jButton10.setBounds(10, 290, 150, 40);
 
         jButton11.setText("Doctor");
+        jButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton11ActionPerformed(evt);
+            }
+        });
         jPanel7.add(jButton11);
         jButton11.setBounds(10, 340, 150, 40);
 
@@ -184,20 +192,50 @@ public class Admin_Home extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
+        
+        Invent_usage  Invent_usageFrame = new Invent_usage();
+        Invent_usageFrame.setVisible(true);
+        Invent_usageFrame.pack();
+        Invent_usageFrame.setLocationRelativeTo(null);
+        this.dispose();
     }//GEN-LAST:event_jButton5ActionPerformed
-
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-        // TODO add your handling code here:
+        
+       Patient_visit  Patient_visitFrame = new Patient_visit();
+        Patient_visitFrame.setVisible(true);
+        Patient_visitFrame.pack();
+        Patient_visitFrame.setLocationRelativeTo(null);
+        this.dispose();
     }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+        Patient_Home   Patient_HomeFrame = new  Patient_Home();
+         Patient_HomeFrame.setVisible(true);
+         Patient_HomeFrame.pack();
+         Patient_HomeFrame.setLocationRelativeTo(null);
+        this.dispose();
+    }//GEN-LAST:event_jButton10ActionPerformed
+
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+        Doctor_Home  Doctor_HomeFrame = new Doctor_Home();
+        Doctor_HomeFrame.setVisible(true);
+        Doctor_HomeFrame.pack();
+        Doctor_HomeFrame.setLocationRelativeTo(null);
+        this.dispose();
+    }//GEN-LAST:event_jButton11ActionPerformed
+
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        Pharmacist_Home  Pharmacist_HomeFrame = new Pharmacist_Home();
+        Pharmacist_HomeFrame.setVisible(true);
+        Pharmacist_HomeFrame.pack();
+        Pharmacist_HomeFrame.setLocationRelativeTo(null);
+        this.dispose();
+    }//GEN-LAST:event_jButton9ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -240,7 +278,6 @@ public class Admin_Home extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;

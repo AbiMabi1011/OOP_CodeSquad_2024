@@ -111,7 +111,7 @@ public class Doctor_Home extends javax.swing.JFrame {
         jPanel3.add(jButton5);
         jButton5.setBounds(470, 240, 220, 140);
 
-        jButton6.setText("Visit Patient");
+        jButton6.setText("DoctorShedule");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
@@ -188,7 +188,12 @@ public class Doctor_Home extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        // TODO add your handling code here:
+        Doctor_Shedul Doctor_ShedulFrame = new Doctor_Shedul();
+         Doctor_ShedulFrame.setVisible(true);
+        Doctor_ShedulFrame.pack();
+         Doctor_ShedulFrame.setLocationRelativeTo(null);
+        this.dispose();
+        
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
