@@ -33,15 +33,15 @@ public class Team3 {
        java.awt.EventQueue.invokeLater(new Runnable() {
             
             public void run() {
-            /*    Login1 Login1Frame = new Login1();
+                Login1 Login1Frame = new Login1();
                 Login1Frame.setVisible(true);
                 Login1Frame.pack();
-                Login1Frame.setLocationRelativeTo(null); //center */
+                Login1Frame.setLocationRelativeTo(null); //center 
              
-                Edit_Profiledoc Edit_ProfiledocFrame = new    Edit_Profiledoc();
+            /*    Edit_Profiledoc Edit_ProfiledocFrame = new    Edit_Profiledoc();
                Edit_ProfiledocFrame.setVisible(true);
                 Edit_ProfiledocFrame.pack();
-               Edit_ProfiledocFrame.setLocationRelativeTo(null); //center 
+               Edit_ProfiledocFrame.setLocationRelativeTo(null); //center */
                 
                 
         // TODO code application logic here

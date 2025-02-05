@@ -421,27 +421,27 @@ public class Edit_Profile extends javax.swing.JFrame {
             }
 
             else{
-                String selectedValue = jComboBox1.getSelectedItem().toString();
+            /*    String selectedValue = jComboBox1.getSelectedItem().toString();
                 System.out.println("Selected: " + selectedValue);
 
                 String Special = SpecialComboBox.getSelectedItem().toString();
-                System.out.println("Selected: " + selectedValue);
+                System.out.println("Selected: " + selectedValue);*/
 
                 String Address12 = Name7.getText() +"," + Name8.getText();
 
                 Pname =  Name.getText();
-                Gencompo =  selectedValue;
+           //     Gencompo =  selectedValue;
                 Page = Name4.getText();
                 Pemail = Name5.getText();
                 Pphone = Name6.getText();
                 Paddress = Address12;
                 PinsurID = PInsurID.getText();
-                Specials = Special;
+           //     Specials = Special;
 
                 System.out.println("Data Entered");
 
-                query = "INSERT INTO Doctor_details(Name, Gender, Age, Email, Phone_Number , Address, Specilation,  SLMC_ID)" +
-                "VALUES('"+Pname+"', '"+Gencompo+"', '"+Page+"', '"+Pemail+"', '"+Pphone+"', '"+Paddress+"', '"+Specials+"', '"+PinsurID+"')";
+            //    query = "INSERT INTO Doctor_details(Name, Gender, Age, Email, Phone_Number , Address, Specilation,  SLMC_ID)" +
+            //    "VALUES('"+Pname+"', '"+Gencompo+"', '"+Page+"', '"+Pemail+"', '"+Pphone+"', '"+Paddress+"', '"+Specials+"', '"+PinsurID+"')";
 
                 String Searchemail = "SELECT * FROM Doctor_details WHERE Email = '"+Pemail+"'";
 
@@ -450,7 +450,7 @@ public class Edit_Profile extends javax.swing.JFrame {
                     showMessageDialog(null, "Already Have an Account");
                 }
                 else {
-                    st.execute(query);
+//                    st.execute(query);
                     showMessageDialog(null, "New Account has been created successfully!");
                 }
 
@@ -573,29 +573,29 @@ public class Edit_Profile extends javax.swing.JFrame {
             }
 
             else{
-                String selectedValue = jComboBox1.getSelectedItem().toString();
-                System.out.println("Selected: " + selectedValue);
+         //      String selectedValue = jComboBox1.getSelectedItem().toString();
+         //       System.out.println("Selected: " + selectedValue);
 
-                String Special = SpecialComboBox.getSelectedItem().toString();
-                System.out.println("Selected: " + selectedValue);
+          //      String Special = SpecialComboBox.getSelectedItem().toString();
+           //     System.out.println("Selected: " + selectedValue);
 
                 String Address12 = Name7.getText() +"," + Name8.getText();
 
                 Pname =  Name.getText();
-                Gencompo =  selectedValue;
+          //      Gencompo =  selectedValue;
                 Page = Name4.getText();
                 Pemail = Name5.getText();
                 Pphone = Name6.getText();
                 Paddress = Address12;
                 PinsurID = PInsurID.getText();
-                Specials = Special;
+        //        Specials = Special;
 
                 System.out.println("Data Entered");
 
-                query = "UPDATE Doctor_details SET Name = '"+Pname+"', Gender = '"+Gencompo+"',  Age = '"+Page+"', Phone_Number = '"+Pphone+"',  Address = '"+Paddress+"',Specilation = '"+Specials+"',  SLMC_ID = '"+PinsurID+"' WHERE Email = '"+Pemail+"'";
+//                query = "UPDATE Doctor_details SET Name = '"+Pname+"', Gender = '"+Gencompo+"',  Age = '"+Page+"', Phone_Number = '"+Pphone+"',  Address = '"+Paddress+"',Specilation = '"+Specials+"',  SLMC_ID = '"+PinsurID+"' WHERE Email = '"+Pemail+"'";
 
                 //update
-                st.execute(query);
+//                st.execute(query);
 
                 showMessageDialog(null, "Account successfully Updated!");
 

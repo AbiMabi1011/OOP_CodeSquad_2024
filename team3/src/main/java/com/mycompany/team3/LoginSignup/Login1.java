@@ -65,7 +65,9 @@ public class Login1 extends javax.swing.JFrame {
         jPanel2.setPreferredSize(new java.awt.Dimension(400, 500));
         jPanel2.setLayout(null);
 
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/team3/LoginSignup/reererer.png"))); // NOI18N
         jLabel1.setText("jLabel1");
+        jLabel1.setPreferredSize(new java.awt.Dimension(800, 500));
         jPanel2.add(jLabel1);
         jLabel1.setBounds(90, 60, 210, 190);
 
@@ -74,7 +76,7 @@ public class Login1 extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("MediCare Plus ");
         jPanel2.add(jLabel2);
-        jLabel2.setBounds(50, 290, 291, 50);
+        jLabel2.setBounds(50, 290, 294, 50);
 
         jLabel3.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
@@ -90,7 +92,7 @@ public class Login1 extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(0, 102, 102));
         jLabel4.setText("LOGIN");
         left.add(jLabel4);
-        jLabel4.setBounds(540, 40, 110, 60);
+        jLabel4.setBounds(540, 40, 120, 60);
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         jLabel5.setText("Password");
