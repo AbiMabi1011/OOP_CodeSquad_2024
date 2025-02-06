@@ -8,9 +8,11 @@ import com.mycompany.team3.Adminview.Admin_Home;
 import com.mycompany.team3.Doctorview.Doctor_Home;
 import com.mycompany.team3.Patientview.Patient_Home;
 import com.mycompany.team3.Pharmacist.Pharmacist_Home;
+import java.awt.HeadlessException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
@@ -270,7 +272,7 @@ public class Login1 extends javax.swing.JFrame {
            
             
             } 
-                }catch(Exception e){
+                }catch(HeadlessException | SQLException e){
            System.out.println("Error!" + e.getMessage()); 
         }
     }//GEN-LAST:event_LoginBtnActionPerformed
