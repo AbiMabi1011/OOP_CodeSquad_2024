@@ -38,6 +38,8 @@ public class Admin_Home extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
+        jPanel4 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
@@ -69,6 +71,28 @@ public class Admin_Home extends javax.swing.JFrame {
 
         jLabel4.setText("Name: ");
 
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 629, Short.MAX_VALUE)
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 798, Short.MAX_VALUE)
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 89, Short.MAX_VALUE)
+        );
+
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
         jPanel8Layout.setHorizontalGroup(
@@ -83,13 +107,20 @@ public class Admin_Home extends javax.swing.JFrame {
                         .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel8Layout.createSequentialGroup()
                         .addGap(31, 31, 31)
-                        .addComponent(jButton3)))
-                .addContainerGap(52, Short.MAX_VALUE))
+                        .addComponent(jButton3))
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
-                .addContainerGap(195, Short.MAX_VALUE)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 95, Short.MAX_VALUE)
                 .addComponent(jLabel4)
                 .addGap(2, 2, 2)
                 .addComponent(jLabel3)
@@ -121,7 +152,7 @@ public class Admin_Home extends javax.swing.JFrame {
             }
         });
         jPanel7.add(jButton5);
-        jButton5.setBounds(470, 240, 220, 140);
+        jButton5.setBounds(490, 330, 220, 140);
 
         jButton7.setText("Monthly Revenue");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
@@ -130,7 +161,7 @@ public class Admin_Home extends javax.swing.JFrame {
             }
         });
         jPanel7.add(jButton7);
-        jButton7.setBounds(340, 70, 220, 140);
+        jButton7.setBounds(350, 140, 220, 140);
 
         jButton8.setText("Patient Visit");
         jButton8.addActionListener(new java.awt.event.ActionListener() {
@@ -139,7 +170,7 @@ public class Admin_Home extends javax.swing.JFrame {
             }
         });
         jPanel7.add(jButton8);
-        jButton8.setBounds(200, 240, 220, 140);
+        jButton8.setBounds(190, 330, 220, 140);
 
         jButton9.setText("Pharmicst");
         jButton9.addActionListener(new java.awt.event.ActionListener() {
@@ -169,7 +200,7 @@ public class Admin_Home extends javax.swing.JFrame {
         jButton11.setBounds(10, 340, 150, 40);
 
         jPanel2.add(jPanel7);
-        jPanel7.setBounds(0, 0, 800, 500);
+        jPanel7.setBounds(0, 0, 870, 500);
 
         jPanel1.add(jPanel2);
         jPanel2.setBounds(0, 0, 800, 500);
@@ -295,6 +326,8 @@ public class Admin_Home extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     // End of variables declaration//GEN-END:variables
