@@ -42,6 +42,8 @@ public class Pharmacist_Home extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         jButton3 = new javax.swing.JButton();
+        jPanel6 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -55,6 +57,7 @@ public class Pharmacist_Home extends javax.swing.JFrame {
 
         jPanel4.setBackground(new java.awt.Color(0, 51, 51));
 
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Age:");
 
@@ -68,6 +71,7 @@ public class Pharmacist_Home extends javax.swing.JFrame {
             }
         });
 
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Name: ");
 
@@ -82,26 +86,26 @@ public class Pharmacist_Home extends javax.swing.JFrame {
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(35, 35, 35)
+                        .addGap(53, 53, 53)
                         .addComponent(jButton1)))
-                .addContainerGap(44, Short.MAX_VALUE))
+                .addContainerGap(75, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                .addContainerGap(22, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel1)
-                .addGap(35, 35, 35)
+                .addGap(26, 26, 26)
                 .addComponent(jButton1)
-                .addContainerGap())
+                .addGap(15, 15, 15))
         );
 
         jPanel3.add(jPanel4);
-        jPanel4.setBounds(10, 10, 170, 130);
+        jPanel4.setBounds(20, 140, 220, 160);
 
         jButton5.setBackground(new java.awt.Color(0, 51, 51));
         jButton5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -113,7 +117,7 @@ public class Pharmacist_Home extends javax.swing.JFrame {
             }
         });
         jPanel3.add(jButton5);
-        jButton5.setBounds(470, 240, 220, 140);
+        jButton5.setBounds(530, 320, 220, 100);
 
         jButton6.setBackground(new java.awt.Color(0, 51, 51));
         jButton6.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
@@ -125,7 +129,7 @@ public class Pharmacist_Home extends javax.swing.JFrame {
             }
         });
         jPanel3.add(jButton6);
-        jButton6.setBounds(200, 60, 220, 140);
+        jButton6.setBounds(270, 210, 230, 80);
 
         jButton7.setBackground(new java.awt.Color(0, 51, 51));
         jButton7.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
@@ -137,7 +141,7 @@ public class Pharmacist_Home extends javax.swing.JFrame {
             }
         });
         jPanel3.add(jButton7);
-        jButton7.setBounds(470, 60, 220, 140);
+        jButton7.setBounds(530, 200, 220, 80);
 
         jButton8.setBackground(new java.awt.Color(0, 51, 51));
         jButton8.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
@@ -149,7 +153,7 @@ public class Pharmacist_Home extends javax.swing.JFrame {
             }
         });
         jPanel3.add(jButton8);
-        jButton8.setBounds(200, 240, 220, 140);
+        jButton8.setBounds(270, 320, 230, 100);
 
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jPanel3.add(jLabel4);
@@ -181,27 +185,48 @@ public class Pharmacist_Home extends javax.swing.JFrame {
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(14, Short.MAX_VALUE))
         );
 
         jPanel3.add(jPanel5);
-        jPanel5.setBounds(0, 460, 810, 40);
+        jPanel5.setBounds(0, 440, 810, 50);
+
+        jPanel6.setBackground(new java.awt.Color(0, 153, 153));
+
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("Pharmacy");
+
+        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
+        jPanel6.setLayout(jPanel6Layout);
+        jPanel6Layout.setHorizontalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addGap(279, 279, 279)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 279, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(242, Short.MAX_VALUE))
+        );
+        jPanel6Layout.setVerticalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(20, Short.MAX_VALUE))
+        );
+
+        jPanel3.add(jPanel6);
+        jPanel6.setBounds(0, 0, 800, 90);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 800, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 800, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 500, Short.MAX_VALUE)
         );
 
         jPanel1.add(jPanel2);
@@ -294,11 +319,13 @@ public class Pharmacist_Home extends javax.swing.JFrame {
     private javax.swing.JButton jButton8;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
     // End of variables declaration//GEN-END:variables
 }

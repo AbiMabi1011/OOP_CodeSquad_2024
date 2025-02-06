@@ -59,13 +59,14 @@ public class Book_Appointment extends javax.swing.JFrame {
         jsearch = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setPreferredSize(new java.awt.Dimension(800, 500));
         jPanel1.setLayout(null);
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setBackground(new java.awt.Color(0, 102, 102));
         jPanel2.setLayout(null);
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Monday", "Tuesday", "WedensDay", "Thurshday", "Friday", "Saturday" }));
@@ -75,7 +76,7 @@ public class Book_Appointment extends javax.swing.JFrame {
             }
         });
         jPanel2.add(jComboBox1);
-        jComboBox1.setBounds(300, 180, 150, 30);
+        jComboBox1.setBounds(210, 250, 150, 30);
 
         CompoTime.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "8.00", "11.59" }));
         CompoTime.addActionListener(new java.awt.event.ActionListener() {
@@ -84,8 +85,11 @@ public class Book_Appointment extends javax.swing.JFrame {
             }
         });
         jPanel2.add(CompoTime);
-        CompoTime.setBounds(300, 230, 72, 22);
+        CompoTime.setBounds(210, 300, 72, 22);
 
+        jButton1.setBackground(new java.awt.Color(153, 51, 0));
+        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Delete Appointment");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -93,8 +97,11 @@ public class Book_Appointment extends javax.swing.JFrame {
             }
         });
         jPanel2.add(jButton1);
-        jButton1.setBounds(600, 340, 140, 40);
+        jButton1.setBounds(580, 400, 190, 40);
 
+        jButton2.setBackground(new java.awt.Color(0, 0, 102));
+        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("Back");
         jButton2.addComponentListener(new java.awt.event.ComponentAdapter() {
             public void componentHidden(java.awt.event.ComponentEvent evt) {
@@ -109,21 +116,30 @@ public class Book_Appointment extends javax.swing.JFrame {
         jPanel2.add(jButton2);
         jButton2.setBounds(10, 400, 100, 40);
 
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Email");
         jPanel2.add(jLabel3);
-        jLabel3.setBounds(210, 110, 80, 30);
+        jLabel3.setBounds(90, 150, 80, 30);
 
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Day");
         jPanel2.add(jLabel4);
-        jLabel4.setBounds(220, 180, 80, 30);
+        jLabel4.setBounds(100, 250, 80, 30);
 
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("Time");
         jPanel2.add(jLabel5);
-        jLabel5.setBounds(200, 220, 80, 30);
+        jLabel5.setBounds(100, 300, 80, 30);
 
+        jButton3.setBackground(new java.awt.Color(0, 0, 102));
+        jButton3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(255, 255, 255));
         jButton3.setText("Confirm");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -131,7 +147,7 @@ public class Book_Appointment extends javax.swing.JFrame {
             }
         });
         jPanel2.add(jButton3);
-        jButton3.setBounds(410, 400, 80, 40);
+        jButton3.setBounds(410, 400, 90, 40);
 
         jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Choose", "General", "Neurosurgeon", "Orthopedic", "Cardiothoracic", "Plastic", "Ophthalmic", "Pediatric" }));
         jComboBox4.addActionListener(new java.awt.event.ActionListener() {
@@ -140,7 +156,7 @@ public class Book_Appointment extends javax.swing.JFrame {
             }
         });
         jPanel2.add(jComboBox4);
-        jComboBox4.setBounds(300, 140, 150, 30);
+        jComboBox4.setBounds(210, 200, 150, 30);
 
         doctorsTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -156,12 +172,14 @@ public class Book_Appointment extends javax.swing.JFrame {
         jScrollPane1.setViewportView(doctorsTable);
 
         jPanel2.add(jScrollPane1);
-        jScrollPane1.setBounds(470, 100, 290, 200);
+        jScrollPane1.setBounds(460, 120, 320, 230);
 
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("Specilation");
         jPanel2.add(jLabel6);
-        jLabel6.setBounds(220, 140, 80, 30);
+        jLabel6.setBounds(70, 200, 100, 30);
 
         pemail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -169,12 +187,14 @@ public class Book_Appointment extends javax.swing.JFrame {
             }
         });
         jPanel2.add(pemail);
-        pemail.setBounds(300, 110, 150, 22);
+        pemail.setBounds(210, 150, 150, 22);
 
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7.setText("Patient Name");
         jPanel2.add(jLabel7);
-        jLabel7.setBounds(210, 70, 80, 30);
+        jLabel7.setBounds(70, 100, 100, 30);
 
         paname.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -182,8 +202,11 @@ public class Book_Appointment extends javax.swing.JFrame {
             }
         });
         jPanel2.add(paname);
-        paname.setBounds(300, 80, 150, 22);
+        paname.setBounds(210, 110, 150, 22);
 
+        jsearch.setBackground(new java.awt.Color(0, 0, 102));
+        jsearch.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jsearch.setForeground(new java.awt.Color(255, 255, 255));
         jsearch.setText("Search");
         jsearch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -191,21 +214,35 @@ public class Book_Appointment extends javax.swing.JFrame {
             }
         });
         jPanel2.add(jsearch);
-        jsearch.setBounds(300, 400, 80, 40);
+        jsearch.setBounds(250, 400, 80, 40);
 
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("am");
         jPanel2.add(jLabel9);
-        jLabel9.setBounds(380, 230, 37, 20);
+        jLabel9.setBounds(290, 300, 37, 20);
+
+        jPanel3.setBackground(new java.awt.Color(0, 153, 153));
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Book Appointment");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 800, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(250, 250, 250)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(298, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 80, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(21, Short.MAX_VALUE))
         );
 
         jPanel2.add(jPanel3);
@@ -583,6 +620,7 @@ public class Book_Appointment extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox4;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;

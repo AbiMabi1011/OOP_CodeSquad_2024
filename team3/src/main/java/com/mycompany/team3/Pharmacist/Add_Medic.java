@@ -55,11 +55,11 @@ public class Add_Medic extends javax.swing.JFrame {
         inid = new javax.swing.JLabel();
         Inventory_ID_Del = new javax.swing.JTextField();
         jButton3 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
         jButton5 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -70,27 +70,32 @@ public class Add_Medic extends javax.swing.JFrame {
         jPanel2.setLayout(null);
 
         inqu.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        inqu.setForeground(new java.awt.Color(255, 255, 255));
         inqu.setText("Quantity");
         jPanel2.add(inqu);
         inqu.setBounds(70, 260, 75, 25);
 
         inpr.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        inpr.setForeground(new java.awt.Color(255, 255, 255));
         inpr.setText("Price  ");
         jPanel2.add(inpr);
         inpr.setBounds(460, 130, 52, 25);
 
         inma.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        inma.setForeground(new java.awt.Color(255, 255, 255));
         inma.setText("Manufacturer");
         jPanel2.add(inma);
-        inma.setBounds(70, 330, 117, 25);
+        inma.setBounds(70, 330, 118, 25);
 
         inex.setBackground(new java.awt.Color(0, 0, 0));
         inex.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        inex.setForeground(new java.awt.Color(255, 255, 255));
         inex.setText("Expiry Date ");
         jPanel2.add(inex);
         inex.setBounds(460, 190, 103, 25);
 
         inname1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        inname1.setForeground(new java.awt.Color(255, 255, 255));
         inname1.setText("Inventory Name");
         jPanel2.add(inname1);
         inname1.setBounds(60, 200, 138, 25);
@@ -104,9 +109,10 @@ public class Add_Medic extends javax.swing.JFrame {
         In_Quantity.setBounds(230, 260, 180, 30);
 
         inname.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        inname.setForeground(new java.awt.Color(255, 255, 255));
         inname.setText("Inventory ID");
         jPanel2.add(inname);
-        inname.setBounds(70, 130, 107, 25);
+        inname.setBounds(70, 130, 106, 25);
         jPanel2.add(Manufacturer);
         Manufacturer.setBounds(230, 330, 180, 30);
 
@@ -161,7 +167,7 @@ public class Add_Medic extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(66, 66, 66))
+                .addGap(73, 73, 73))
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -172,18 +178,17 @@ public class Add_Medic extends javax.swing.JFrame {
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(Inventory_ID_Del, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(inid, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(19, Short.MAX_VALUE))
+                .addContainerGap(7, Short.MAX_VALUE))
         );
 
         jPanel2.add(jPanel8);
         jPanel8.setBounds(470, 260, 300, 170);
 
-        jButton1.setText("Back");
-        jPanel2.add(jButton1);
-        jButton1.setBounds(230, 410, 90, 30);
-
+        jButton2.setBackground(new java.awt.Color(0, 0, 102));
+        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("Save");
         jButton2.setPreferredSize(new java.awt.Dimension(800, 500));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -192,7 +197,7 @@ public class Add_Medic extends javax.swing.JFrame {
             }
         });
         jPanel2.add(jButton2);
-        jButton2.setBounds(330, 410, 90, 30);
+        jButton2.setBounds(290, 410, 90, 30);
 
         jPanel3.setBackground(new java.awt.Color(0, 51, 51));
 
@@ -241,6 +246,13 @@ public class Add_Medic extends javax.swing.JFrame {
 
         jPanel2.add(jPanel4);
         jPanel4.setBounds(0, 460, 800, 40);
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Add Medicals");
+        jPanel2.add(jLabel1);
+        jLabel1.setBounds(230, 30, 320, 40);
 
         jPanel1.add(jPanel2);
         jPanel2.setBounds(0, 0, 800, 500);
@@ -480,10 +492,10 @@ public class Add_Medic extends javax.swing.JFrame {
     private javax.swing.JLabel inname1;
     private javax.swing.JLabel inpr;
     private javax.swing.JLabel inqu;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton5;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
