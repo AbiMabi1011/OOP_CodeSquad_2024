@@ -180,21 +180,23 @@ public class Login1 extends javax.swing.JFrame {
                     
                     //Seperate the email and phone number is vaild or not
                     String text = emailtoPhone.getText();
-                    char firstChar = text.charAt(0);
+                    char firstChar1 = text.charAt(0);
                    
-                    if("".equals(emailtoPhone.getText())){
+                    if(text.isEmpty()){  
+                        System.out.println("view");
                         
                        JOptionPane.showMessageDialog(new JFrame(), "Invalid input. Must start with a letter (email) or number (phone)", "Error", 
                                JOptionPane.ERROR_MESSAGE );
+                       
                         }
                     
-                    else if ((Character.isLetter(firstChar)) && (!text.endsWith("@gmail.com") ))  {
-                                                                                                     
+                    else if ((Character.isLetter(firstChar1)) && (!text.endsWith("@gmail.com") ))  {
+                                 System.out.println("viecccw");                                                                    
                                 JOptionPane.showMessageDialog(new JFrame(), "Enter a valid Gmail address", "Error", 
                                           JOptionPane.ERROR_MESSAGE);
                     } 
                     
-                 else if ((Character.isDigit(firstChar)) && (text.length() != 10)) {
+                 else if ((Character.isDigit(firstChar1)) && (text.length() != 10)) {
                      
                            
                                 JOptionPane.showMessageDialog(new JFrame(), "Phone number must be exactly 10 digits", "Error", 
